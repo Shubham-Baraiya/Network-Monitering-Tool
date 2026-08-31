@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Network Monitoring Tool</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <h1>
+                Network Monitoring Tool
+            </h1>
+
+            <p>
+                Real-Time Network Dashboard
+            </p>
+
+        </header>
+
+
+        <section class="info-grid">
+
+            <div class="card">
+
+                <h3>Interface</h3>
+
+                <p id="interface">
+                    Loading...
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>IPv4 Address</h3>
+
+                <p id="ip">
+                    Loading...
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Subnet</h3>
+
+                <p id="network">
+                    Loading...
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Live Hosts</h3>
+
+                <p id="hosts">
+                    Loading...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>
+                Interface Traffic
+            </h2>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <span>
+                        Total Download
+                    </span>
+
+                    <strong id="download">
+                        0 MB
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        Total Upload
+                    </span>
+
+                    <strong id="upload">
+                        0 MB
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        Packets Received
+                    </span>
+
+                    <strong id="packets-received">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        Packets Sent
+                    </span>
+
+                    <strong id="packets-sent">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>
+                Reachability
+            </h2>
+
+            <div id="targets" class="target-grid">
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <p>
+                Auto-refresh: 3 seconds
+            </p>
+
+            <p id="last-updated">
+                Last updated: -
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script
+        src="{{ url_for('static', filename='js/dashboard.js') }}"
+    ></script>
+
+</body>
+
+</html>
